@@ -1876,3 +1876,87 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:24%!important;
   }
 }
+
+
+/* ---------- Ceremony tile composition refinement ----------
+   Keep the uploaded square artwork at its native card proportion. The three
+   illustrated tiles use a higher text position; the Wedding tile gets a
+   deliberate editorial layout: heading/message on top, details split below,
+   then venue and Maps centred. */
+.event>div:last-child{
+  top:30%!important;
+}
+.wedding>div:last-child{
+  top:18%!important;
+  left:7%!important;
+  right:7%!important;
+  text-align:center;
+}
+.wedding .facts{
+  grid-template-columns:1fr 1fr;
+  gap:16px 34px;
+  margin:20px auto 14px;
+  max-width:570px;
+}
+.wedding .facts span:nth-child(3){
+  grid-column:1/-1;
+  width:min(280px,100%);
+  justify-self:center;
+}
+.wedding .facts span:last-child{
+  grid-column:1/-1;
+  margin-top:0;
+}
+.wedding .map{
+  display:flex;
+  width:max-content;
+  max-width:100%;
+  margin:12px auto 0;
+}
+.wedding h3{
+  margin:7px 0 6px;
+}
+.wedding .tag{
+  max-width:560px;
+  margin:0 auto;
+}
+@media(max-width:720px){
+  .event>div:last-child{
+    top:30%!important;
+  }
+  .wedding>div:last-child{
+    top:18%!important;
+    left:5%!important;
+    right:5%!important;
+  }
+  .wedding .facts{
+    gap:13px 18px;
+    margin:17px auto 11px;
+  }
+  .wedding .facts span:nth-child(3){
+    width:min(250px,100%);
+  }
+  .wedding .facts b{
+    font-size:11px;
+  }
+  .wedding .map{
+    margin-top:10px;
+  }
+}
+@media(max-width:390px){
+  .event>div:last-child{
+    top:28%!important;
+  }
+  .wedding>div:last-child{
+    top:17%!important;
+    left:4.5%!important;
+    right:4.5%!important;
+  }
+  .wedding .facts{
+    gap:11px 12px;
+    margin-top:15px;
+  }
+  .wedding .facts b{
+    font-size:10.5px;
+  }
+}
