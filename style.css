@@ -2350,3 +2350,75 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:247px!important;
   }
 }
+
+
+/* ---------- Wedding mobile: restore a clean, centred facts grid ---------- */
+/* The desktop Wedding composition stays unchanged. On phones, the fixed
+   left/right absolute columns were too rigid for the narrower card. */
+@media(max-width:720px){
+  .wedding .facts.wedding-facts{
+    position:absolute!important;
+    top:158px!important;
+    left:8%!important;
+    right:8%!important;
+    width:84%!important;
+    height:auto!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:12px 14px!important;
+    align-items:start!important;
+    margin:0!important;
+  }
+  .wedding .facts.wedding-facts span{
+    position:static!important;
+    width:auto!important;
+    grid-column:auto!important;
+    text-align:center!important;
+    min-width:0!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(1),
+  .wedding .facts.wedding-facts span:nth-child(2){
+    grid-column:auto!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    grid-column:1 / -1!important;
+    width:auto!important;
+    margin:0 auto!important;
+  }
+  .wedding .facts.wedding-facts span b{
+    font-size:10px!important;
+    line-height:1.2!important;
+    margin-bottom:3px!important;
+    white-space:normal!important;
+  }
+  .wedding .facts.wedding-facts span{
+    font-size:7px!important;
+    line-height:1.25!important;
+    letter-spacing:.8px!important;
+  }
+  .wedding .wedding-venue{
+    top:257px!important;
+  }
+  .wedding .wedding-venue>span b{
+    font-size:10.5px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts{
+    top:151px!important;
+    left:7%!important;
+    right:7%!important;
+    width:86%!important;
+    gap:10px 10px!important;
+  }
+  .wedding .facts.wedding-facts span b{
+    font-size:9.5px!important;
+  }
+  .wedding .facts.wedding-facts span{
+    font-size:6.8px!important;
+  }
+  .wedding .wedding-venue{
+    top:247px!important;
+  }
+}
