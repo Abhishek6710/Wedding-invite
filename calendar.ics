@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Shivani and Abhishek//Wedding Celebration//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Shivani & Abhishek — Wedding Celebration
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VEVENT
+UID:haldi-20261209@abhishek6710.github.io
+DTSTAMP:20260929T000000Z
+DTSTART;TZID=Asia/Kolkata:20261209T110000
+SUMMARY:Haldi — Shivani & Abhishek
+LOCATION:The Laali Imperial, Amravati, Maharashtra, India
+DESCRIPTION:Shades of yellow. Open in Maps: https://www.google.com/maps/place/?q=place_id:ChIJIaEc3aGl1jsRogYPOxetZpU
+URL:https://abhishek6710.github.io/Wedding/
+END:VEVENT
+BEGIN:VEVENT
+UID:sangeet-20261209@abhishek6710.github.io
+DTSTAMP:20260929T000000Z
+DTSTART;TZID=Asia/Kolkata:20261209T183000
+SUMMARY:Sangeet — Shivani & Abhishek
+LOCATION:The Laali Imperial, Amravati, Maharashtra, India
+DESCRIPTION:Wear all your shimmery and shiny clothes for a wonderful performance. Open in Maps: https://www.google.com/maps/place/?q=place_id:ChIJIaEc3aGl1jsRogYPOxetZpU
+URL:https://abhishek6710.github.io/Wedding/
+END:VEVENT
+BEGIN:VEVENT
+UID:wedding-20261210@abhishek6710.github.io
+DTSTAMP:20260929T000000Z
+DTSTART;TZID=Asia/Kolkata:20261210T121000
+SUMMARY:The Wedding — Shivani & Abhishek
+LOCATION:The Laali Imperial, Amravati, Maharashtra, India
+DESCRIPTION:Wedding muhurat 12:10 PM. Varat departs at 10:00 AM. Kathpadar Saree & Kurtas. Open in Maps: https://www.google.com/maps/place/?q=place_id:ChIJIaEc3aGl1jsRogYPOxetZpU
+URL:https://abhishek6710.github.io/Wedding/
+END:VEVENT
+BEGIN:VEVENT
+UID:reception-20261212@abhishek6710.github.io
+DTSTAMP:20260929T000000Z
+DTSTART;TZID=Asia/Kolkata:20261212T190000
+SUMMARY:Reception — Shivani & Abhishek
+LOCATION:Sai Vatika, Shankar Nagar, Nagpur, Maharashtra, India
+DESCRIPTION:7:00 PM onwards. Open in Maps: https://www.google.com/maps/place/?q=place_id:ChIJ9fRKkWLA1DsRkmvyIumsxC0
+URL:https://abhishek6710.github.io/Wedding/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 980" preserveAspectRatio="none">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#170821"/><stop offset=".5" stop-color="#4b175b"/><stop offset="1" stop-color="#1b0927"/></linearGradient>
+ <radialGradient id="stage"><stop stop-color="#e9c56f" stop-opacity=".22"/><stop offset="1" stop-color="#e9c56f" stop-opacity="0"/></radialGradient>
+ <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2d17a" stop-opacity=".25"/><stop offset="1" stop-color="#f2d17a" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="720" height="980" fill="url(#bg)"/>
+<ellipse cx="360" cy="230" rx="310" ry="230" fill="url(#stage)"/>
+<!-- warm stage lights -->
+<g fill="#f1d27b">
+ <circle cx="82" cy="66" r="6"/><circle cx="150" cy="52" r="5"/><circle cx="220" cy="44" r="4"/>
+ <circle cx="500" cy="44" r="4"/><circle cx="570" cy="52" r="5"/><circle cx="638" cy="66" r="6"/>
+</g>
+<g fill="none" stroke="#dcb96d" stroke-width="1.6" opacity=".7">
+ <path d="M55 62 Q140 118 220 62 T360 62 T500 62 T665 62"/>
+ <path d="M82 70v44M150 58v44M220 50v42M500 50v42M570 58v44M638 70v44"/>
+</g>
+<!-- subtle light beams -->
+<path d="M82 115 L245 360 L330 360 L150 115Z" fill="url(#beam)" opacity=".42"/>
+<path d="M638 115 L475 360 L390 360 L570 115Z" fill="url(#beam)" opacity=".42"/>
+<!-- refined dhol -->
+<g transform="translate(360 178) rotate(-4)">
+ <ellipse rx="82" ry="30" fill="#6c3156" stroke="#e3c477" stroke-width="3"/>
+ <path d="M-82 0 L-65 68 Q0 103 65 68 L82 0" fill="#3e1938" stroke="#e3c477" stroke-width="3"/>
+ <ellipse rx="64" ry="23" fill="#ad6b73" stroke="#e3c477" stroke-width="2"/>
+ <path d="M-55-7L55 7M-55 7L55-7" fill="none" stroke="#e8ca7a" stroke-width="1.5"/>
+ <path d="M-40 22L-70 96M40 22L70 96" fill="none" stroke="#e8ca7a" stroke-width="3" stroke-linecap="round"/>
+</g>
+<!-- graceful dance silhouettes -->
+<g fill="#e6c477" opacity=".9">
+ <g transform="translate(215 300)">
+  <circle cx="0" cy="-46" r="14"/>
+  <path d="M-7-31 Q-22 5 -6 40 L-38 87 Q-42 95-34 99 Q-24 101-19 91 L7 48 Q28 74 50 91 Q57 97 63 90 Q66 84 59 78 L28 42 Q41 7 23-28 Q12-42-7-31Z"/>
+  <path d="M-3-22 Q-55-42-75-7 Q-80 3-71 7 Q-63 10-57 1 Q-43-16-16-5Z"/>
+  <path d="M18-18 Q63-46 82-12 Q86-2 78 3 Q69 7 64-2 Q51-19 29-3Z"/>
+ </g>
+ <g transform="translate(505 300) scale(-1 1)">
+  <circle cx="0" cy="-46" r="14"/>
+  <path d="M-7-31 Q-22 5 -6 40 L-38 87 Q-42 95-34 99 Q-24 101-19 91 L7 48 Q28 74 50 91 Q57 97 63 90 Q66 84 59 78 L28 42 Q41 7 23-28 Q12-42-7-31Z"/>
+  <path d="M-3-22 Q-55-42-75-7 Q-80 3-71 7 Q-63 10-57 1 Q-43-16-16-5Z"/>
+  <path d="M18-18 Q63-46 82-12 Q86-2 78 3 Q69 7 64-2 Q51-19 29-3Z"/>
+ </g>
+</g>
+<!-- music notes and sparkle trail -->
+<g fill="#f0d17a">
+ <path d="M120 390h7v-25h-7zM127 365q24-10 28 7q-5 15-18 7q-7-5-10-14z"/>
+ <path d="M593 390h7v-25h-7zM600 365q24-10 28 7q-5 15-18 7q-7-5-10-14z"/>
+ <path d="M360 395 l5 11 11 5-11 5-5 11-5-11-11-5 11-5z"/>
+</g>
+<g fill="none" stroke="#d5b267" stroke-width="1.4" opacity=".48">
+ <rect x="18" y="18" width="684" height="944" stroke-width="1.8" opacity=".8"/>
+ <rect x="30" y="30" width="660" height="920" opacity=".35"/>
+ <path d="M52 438 Q130 408 208 438 T364 438 T520 438 T668 438"/>
+</g>
+<g fill="#f3d47b">
+ <path d="M94 510l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/>
+ <path d="M626 510l4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/>
+ <circle cx="145" cy="555" r="2.5"/><circle cx="575" cy="555" r="2.5"/>
+</g>
+<!-- low stage line -->
+<path d="M92 900 Q160 865 228 900 T360 900 T492 900 T628 900" fill="none" stroke="#c9a65d" stroke-width="1.7" opacity=".55"/>
+</svg>

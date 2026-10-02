@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Warm paper background with marigold flowers along the bottom">
+<defs>
+  <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".018" numOctaves="3" seed="8"/><feColorMatrix values="1 0 0 0 .72  0 1 0 0 .68  0 0 1 0 .58  0 0 0 .08 0"/></filter>
+  <radialGradient id="petal" cx="45%" cy="40%"><stop offset="0" stop-color="#ffd85a"/><stop offset=".65" stop-color="#f59a16"/><stop offset="1" stop-color="#d85d08"/></radialGradient>
+  <radialGradient id="petal2" cx="45%" cy="40%"><stop offset="0" stop-color="#ffe57a"/><stop offset=".62" stop-color="#f7a51a"/><stop offset="1" stop-color="#df6509"/></radialGradient>
+  <g id="flower">
+    <g fill="url(#petal)">
+      <ellipse rx="10" ry="22" transform="rotate(0) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(45) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(90) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(135) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(180) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(225) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(270) translate(0,-18)"/>
+      <ellipse rx="10" ry="22" transform="rotate(315) translate(0,-18)"/>
+    </g>
+    <circle r="12" fill="#b94b08"/><circle r="6" fill="#f7b52a"/>
+  </g>
+  <g id="smallflower">
+    <g fill="url(#petal2)">
+      <ellipse rx="7" ry="15" transform="rotate(0) translate(0,-12)"/>
+      <ellipse rx="7" ry="15" transform="rotate(60) translate(0,-12)"/>
+      <ellipse rx="7" ry="15" transform="rotate(120) translate(0,-12)"/>
+      <ellipse rx="7" ry="15" transform="rotate(180) translate(0,-12)"/>
+      <ellipse rx="7" ry="15" transform="rotate(240) translate(0,-12)"/>
+      <ellipse rx="7" ry="15" transform="rotate(300) translate(0,-12)"/>
+    </g><circle r="8" fill="#b94b08"/>
+  </g>
+</defs>
+<rect width="1200" height="520" fill="#f5eee3"/>
+<rect width="1200" height="520" filter="url(#paper)" opacity=".28"/>
+<path d="M0 500 Q120 438 240 490 T480 480 T720 490 T960 478 T1200 490 L1200 520 L0 520Z" fill="#65724a" opacity=".9"/>
+<g fill="none" stroke="#596b46" stroke-width="4" opacity=".9">
+  <path d="M0 505 Q90 440 160 510 M120 515 Q190 445 250 510 M260 515 Q340 435 410 505 M400 515 Q480 445 550 510 M540 515 Q620 430 690 505 M680 515 Q760 440 830 510 M820 515 Q900 435 970 505 M960 515 Q1040 440 1110 510 M1080 515 Q1140 450 1200 500"/>
+</g>
+<g opacity=".98">
+  <use href="#flower" transform="translate(42 474) scale(.9)"/>
+  <use href="#smallflower" transform="translate(112 500) scale(.9)"/>
+  <use href="#flower" transform="translate(178 462) scale(1.05)"/>
+  <use href="#smallflower" transform="translate(242 500) scale(1.05)"/>
+  <use href="#flower" transform="translate(308 468) scale(.92)"/>
+  <use href="#smallflower" transform="translate(365 500) scale(1.1)"/>
+  <use href="#flower" transform="translate(430 460) scale(1.08)"/>
+  <use href="#smallflower" transform="translate(495 500) scale(.92)"/>
+  <use href="#flower" transform="translate(560 470) scale(.96)"/>
+  <use href="#smallflower" transform="translate(625 500) scale(1.08)"/>
+  <use href="#flower" transform="translate(690 458) scale(1.1)"/>
+  <use href="#smallflower" transform="translate(755 500) scale(.94)"/>
+  <use href="#flower" transform="translate(820 470) scale(1.0)"/>
+  <use href="#smallflower" transform="translate(880 500) scale(1.08)"/>
+  <use href="#flower" transform="translate(945 458) scale(1.08)"/>
+  <use href="#smallflower" transform="translate(1010 500) scale(.95)"/>
+  <use href="#flower" transform="translate(1078 470) scale(1.0)"/>
+  <use href="#smallflower" transform="translate(1140 500) scale(1.08)"/>
+</g>
+<g fill="#6f7c51" opacity=".9">
+  <ellipse cx="82" cy="454" rx="5" ry="22" transform="rotate(-32 82 454)"/><ellipse cx="150" cy="486" rx="4" ry="20" transform="rotate(28 150 486)"/>
+  <ellipse cx="270" cy="460" rx="5" ry="24" transform="rotate(-25 270 460)"/><ellipse cx="392" cy="480" rx="4" ry="22" transform="rotate(30 392 480)"/>
+  <ellipse cx="520" cy="458" rx="5" ry="23" transform="rotate(-28 520 458)"/><ellipse cx="645" cy="482" rx="4" ry="22" transform="rotate(26 645 482)"/>
+  <ellipse cx="770" cy="458" rx="5" ry="23" transform="rotate(-28 770 458)"/><ellipse cx="900" cy="480" rx="4" ry="22" transform="rotate(28 900 480)"/>
+  <ellipse cx="1030" cy="458" rx="5" ry="23" transform="rotate(-28 1030 458)"/><ellipse cx="1160" cy="480" rx="4" ry="22" transform="rotate(28 1160 480)"/>
+</g>
+</svg>

@@ -1,0 +1,1700 @@
+/* =========================================================
+   SHIVANI & ABHISHEK — WEDDING INVITATION
+   Visual system: Maharashtrian heritage × modern luxury
+   This file is intentionally consolidated: one source of truth,
+   with responsive rules grouped at the end.
+   ========================================================= */
+
+:root{
+  --maroon:#65152b;
+  --maroon-deep:#3a0b19;
+  --maroon-ink:#4b1020;
+  --ivory:#fbf4e7;
+  --paper:#f7ecda;
+  --paper-deep:#ead9bf;
+  --gold:#c89b4b;
+  --gold-light:#e4c579;
+  --gold-pale:#f2dfb2;
+  --ink:#302127;
+  --muted:#78666a;
+  --line:#d8c4a5;
+  --shadow:rgba(49,12,25,.13);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Manrope,Arial,sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+
+/* ---------- Shared typography ---------- */
+.kicker,.eyebrow{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:3.8px;
+  text-transform:uppercase;
+}
+.section{
+  max-width:1080px;
+  margin:auto;
+  padding:112px 28px;
+}
+.story h2,.events>h2,.gallery h2,.family h2,.rsvp h2{
+  font:500 clamp(48px,6.5vw,76px)/.94 "Cormorant Garamond",serif;
+  color:var(--maroon-ink);
+}
+.story h2 em,.events h2 em,.gallery h2 em,.family h2 em,.rsvp h2 em{
+  color:var(--maroon);
+}
+.lead{
+  max-width:690px;
+  margin:24px auto 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:100svh;
+  min-height:100dvh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  isolation:isolate;
+  color:#fff;
+  background:
+    linear-gradient(180deg,rgba(24,4,10,.10),rgba(35,5,13,.20) 38%,rgba(25,4,10,.62) 100%),
+    url("images/opening-mandap (1).webp") center/cover no-repeat;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  z-index:1;
+  border:1px solid rgba(228,195,112,.52);
+  box-shadow:inset 0 0 90px rgba(0,0,0,.24);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:31px;
+  z-index:1;
+  border:1px solid rgba(255,246,220,.14);
+  pointer-events:none;
+}
+.hero nav{
+  position:absolute;
+  top:32px;
+  right:45px;
+  z-index:10;
+  display:flex;
+  gap:28px;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero nav a{transition:color .25s ease}
+.hero nav a:hover{color:var(--gold-light)}
+.hero-inner{
+  position:relative;
+  z-index:8;
+  width:min(760px,90vw);
+  padding:86px 28px 100px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(ellipse at center,rgba(40,7,16,.38),rgba(40,7,16,.08) 52%,transparent 76%);
+}
+.hero-ganesh{
+  width:74px;
+  height:74px;
+  margin:0 auto 8px;
+  color:#e7c574;
+  opacity:.96;
+  filter:drop-shadow(0 4px 11px rgba(0,0,0,.52));
+}
+.hero-ganesh svg{display:block;width:100%;height:100%}
+.hero .eyebrow{
+  max-width:590px;
+  padding:8px 16px 7px;
+  color:#f0cf7a;
+  background:rgba(35,7,15,.70);
+  border:1px solid rgba(232,197,111,.50);
+  box-shadow:0 8px 28px rgba(0,0,0,.22);
+  text-shadow:0 2px 9px rgba(0,0,0,.95);
+}
+.hero .small{
+  max-width:620px;
+  margin-top:13px;
+  font:400 22px/1.15 "Cormorant Garamond",serif;
+  color:#fff1d6;
+  text-shadow:0 2px 15px rgba(20,3,8,.95);
+}
+.hero h1{
+  margin:20px 0 15px;
+  font:400 clamp(70px,11vw,136px)/.82 "Great Vibes",cursive;
+  white-space:nowrap;
+  letter-spacing:-.02em;
+  color:#f0cf79;
+  text-shadow:0 5px 28px rgba(0,0,0,.68);
+}
+.hero h1 i{
+  font:400 .30em "Cormorant Garamond",serif;
+  color:#f0d58d;
+  margin:0 13px;
+}
+.hero .gold{
+  color:var(--gold-light);
+  font-size:20px;
+  text-shadow:0 2px 12px rgba(0,0,0,.85);
+}
+.hero-welcome{
+  max-width:570px;
+  margin:19px auto 0;
+  font:400 19px/1.45 "Cormorant Garamond",serif;
+  color:#fff1d6;
+  text-shadow:0 2px 15px rgba(20,3,8,.95);
+}
+.hero-ganesh-divider{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+  margin:18px auto 0;
+  color:#e8c978;
+  text-shadow:0 2px 10px rgba(0,0,0,.85);
+}
+.hero-ganesh-divider:before,.hero-ganesh-divider:after{
+  content:"";
+  width:74px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(228,195,112,.75));
+}
+.hero-ganesh-divider:after{
+  background:linear-gradient(90deg,rgba(228,195,112,.75),transparent);
+}
+.hero-ganesh-divider svg{
+  width:40px;
+  height:40px;
+  flex:0 0 40px;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.7));
+}
+.hero-ganesh-divider span{font-size:13px;line-height:1}
+.hero-ganesh-divider .ganesh-mantra{
+  font-family:"Noto Serif Devanagari","Noto Sans Devanagari","Mangal",serif;
+  font-size:13px;
+  letter-spacing:1.3px;
+  color:#f0d9ae;
+  white-space:nowrap;
+}
+.hero .date{
+  display:inline-block;
+  margin-top:18px;
+  padding:7px 18px 5px;
+  font:600 23px/1.2 "Cormorant Garamond",serif;
+  letter-spacing:3.8px;
+  color:#fff3dc;
+  background:rgba(38,8,17,.34);
+  border-top:1px solid rgba(226,189,103,.40);
+  border-bottom:1px solid rgba(226,189,103,.30);
+  text-shadow:0 2px 10px rgba(0,0,0,.95);
+}
+.hero .place{
+  margin-top:7px;
+  color:#f0d9ae;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  text-shadow:0 2px 10px rgba(0,0,0,.95);
+}
+.hero .down{
+  display:inline-block;
+  margin-top:23px;
+  padding:9px 17px;
+  color:#fff1d2;
+  border:1px solid rgba(226,189,103,.52);
+  background:rgba(35,7,15,.30);
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  text-shadow:0 2px 9px rgba(0,0,0,.95);
+  transition:transform .25s ease,background .25s ease;
+}
+.hero .down:hover{
+  transform:translateY(-2px);
+  background:rgba(35,7,15,.50);
+}
+.down:after{
+  content:"";
+  display:block;
+  width:1px;
+  height:24px;
+  margin:7px auto -31px;
+  background:linear-gradient(var(--gold-light),transparent);
+}
+.orn{
+  position:absolute;
+  z-index:2;
+  color:#d4af63;
+  opacity:.13;
+  pointer-events:none;
+}
+.o1{left:-90px;bottom:-80px;font-size:280px}
+.o2{right:-70px;top:130px;font-size:240px}
+.hero-arch{
+  position:absolute;
+  z-index:2;
+  right:-8%;
+  top:8%;
+  width:46%;
+  height:78%;
+  border:1px solid rgba(216,181,95,.20);
+  border-bottom:0;
+  border-radius:50% 50% 0 0;
+  transform:rotate(-7deg);
+  pointer-events:none;
+  opacity:.7;
+}
+.hero-arch:before,.hero-arch:after{
+  content:"";
+  position:absolute;
+  top:8%;
+  width:18px;
+  height:18px;
+  border:1px solid rgba(217,185,105,.38);
+  transform:rotate(45deg);
+}
+.hero-arch:before{left:2%}
+.hero-arch:after{right:2%}
+.rangoli{
+  position:absolute;
+  z-index:1;
+  left:72%;
+  top:53%;
+  width:min(620px,50vw);
+  height:min(620px,50vw);
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(215,179,102,.14);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:rgba(215,179,102,.18);
+  font-size:28px;
+  letter-spacing:18px;
+  pointer-events:none;
+}
+.rangoli span{
+  position:absolute;
+  font-size:90px;
+  letter-spacing:0;
+  color:rgba(215,179,102,.10);
+}
+.hero-particles{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:.18;
+  background-image:
+    radial-gradient(circle,#e2c373aa 1px,transparent 1.5px),
+    radial-gradient(circle,#fff5d633 1px,transparent 1.5px);
+  background-size:95px 95px,137px 137px;
+  background-position:10px 20px,55px 70px;
+}
+
+/* ---------- Story ---------- */
+.story{text-align:center}
+.timeline{
+  max-width:900px;
+  margin:58px auto 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  text-align:left;
+}
+.timeline-item{
+  position:relative;
+  padding:27px 29px;
+  background:#fffaf2;
+  border:1px solid var(--line);
+  box-shadow:0 12px 35px rgba(69,30,35,.06);
+}
+.timeline-item:before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  width:28px;
+  height:1px;
+  background:var(--gold);
+}
+.timeline-item small{
+  font-size:9px;
+  letter-spacing:2px;
+  color:#a47a37;
+  font-weight:700;
+}
+.timeline-item h3{
+  margin:7px 0;
+  font:500 29px/1.05 "Cormorant Garamond",serif;
+  color:var(--maroon);
+}
+.timeline-item p{
+  font:400 17px/1.5 "Cormorant Garamond",serif;
+  color:var(--muted);
+}
+.story-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+  text-align:left;
+  margin-top:65px;
+}
+.photo{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:260px;
+  overflow:hidden;
+  color:#987b60;
+  background:linear-gradient(135deg,#ead8bd,#f8eddb);
+  border:1px solid #dcc4a5;
+}
+.photo:before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:1px dashed #987b6055;
+}
+.photo span{
+  position:relative;
+  z-index:1;
+  font-size:10px;
+  letter-spacing:4px;
+}
+.portrait{aspect-ratio:4/5}
+.copy{font:400 23px/1.55 "Cormorant Garamond",serif}
+.copy small{font:700 10px Manrope;letter-spacing:3px;color:var(--gold)}
+.copy p{margin-top:16px}
+.sign{font-size:18px!important}
+.sign b{font:400 38px "Great Vibes";color:var(--maroon)}
+
+/* ---------- Countdown ---------- */
+.count{
+  padding:72px 20px;
+  text-align:center;
+  background:#efe0ca;
+  border-block:1px solid #e2cfb3;
+}
+.count .kicker{color:#9b7137}
+.count #clock{
+  display:flex;
+  justify-content:center;
+  gap:clamp(25px,8vw,100px);
+  margin-top:26px;
+}
+.count b{
+  display:block;
+  font:500 clamp(40px,6vw,68px) "Cormorant Garamond",serif;
+  color:var(--maroon);
+}
+.count span{
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* ---------- Tradition bridge ---------- */
+.tradition-strip{
+  position:relative;
+  overflow:hidden;
+  padding:46px 20px;
+  text-align:center;
+  color:#f7e5bd;
+  background:linear-gradient(90deg,#3b0a1b,#711b36 50%,#2a0612);
+  border-block:1px solid var(--gold);
+  box-shadow:0 15px 40px rgba(44,8,20,.16);
+}
+.tradition-strip:before,.tradition-strip:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:120px;
+  height:120px;
+  border:1px solid rgba(228,197,111,.20);
+  transform:translateY(-50%) rotate(45deg);
+}
+.tradition-strip:before{left:-75px}
+.tradition-strip:after{right:-75px}
+.tradition-ornament{margin-bottom:6px;color:#d7b366;letter-spacing:8px}
+.tradition-strip p{
+  font:500 15px "Cormorant Garamond",serif;
+  letter-spacing:5px;
+}
+.tradition-strip span{
+  display:block;
+  margin-top:5px;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:.72;
+}
+.tradition-strip b{
+  display:block;
+  margin-top:12px;
+  font:500 25px "Cormorant Garamond",serif;
+  color:#fff3d9;
+}
+
+/* ---------- Celebration suite ---------- */
+.events{text-align:center}
+.event{
+  --event-ink:#fff;
+  --event-muted:#eadbd3;
+  --event-gold:#f0ca72;
+  position:relative;
+  max-width:960px;
+  margin:42px auto 0;
+  padding:48px 46px;
+  display:grid;
+  grid-template-columns:56px 105px 1fr;
+  gap:24px;
+  text-align:left;
+  overflow:hidden;
+  border:1px solid rgba(228,197,111,.55);
+  box-shadow:0 22px 60px var(--shadow);
+  isolation:isolate;
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.event:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 72px rgba(49,12,25,.20);
+}
+.event:before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  z-index:2;
+  border:1px solid rgba(255,255,255,.42);
+  pointer-events:none;
+}
+.event:after{
+  content:"❧";
+  position:absolute;
+  right:24px;
+  bottom:8px;
+  z-index:3;
+  font:400 48px/1 "Cormorant Garamond",serif;
+  color:rgba(255,255,255,.22);
+  transform:rotate(-12deg);
+  pointer-events:none;
+}
+.event>strong{
+  position:relative;
+  z-index:4;
+  align-self:start;
+  padding-top:5px;
+  font:500 32px/1 "Cormorant Garamond",serif;
+  color:var(--event-gold);
+}
+.symbol{
+  position:relative;
+  z-index:4;
+  align-self:start;
+  text-align:center;
+  font:400 58px/1 "Cormorant Garamond",serif;
+  color:var(--event-gold);
+  text-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+.event>div:last-child{position:relative;z-index:4}
+.event small{
+  display:block;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:var(--event-muted);
+}
+.event h3{
+  margin-top:3px;
+  font:500 59px/.96 "Cormorant Garamond",serif;
+  color:var(--event-ink);
+}
+.tag{
+  margin-top:7px;
+  font:400 21px/1.15 "Cormorant Garamond",serif;
+  color:var(--event-ink);
+}
+.facts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 28px;
+  margin:22px 0;
+}
+.facts span{
+  display:flex;
+  flex-direction:column;
+  min-width:100px;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+  color:var(--event-muted);
+}
+.facts b{
+  font:700 12px/1.35 Manrope,sans-serif;
+  color:var(--event-ink);
+  text-transform:none;
+  letter-spacing:0;
+}
+.map{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid var(--event-gold);
+  color:var(--event-gold);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  transition:background .25s ease,color .25s ease;
+}
+.map:hover{
+  background:var(--event-gold);
+  color:var(--maroon-deep);
+}
+.note{
+  max-width:650px;
+  font-size:12px;
+  color:var(--event-muted);
+}
+
+/* Haldi — turmeric paper, marigold energy, kalash/toran illustration */
+.haldi{
+  --event-ink:#4c1715;
+  --event-muted:#674b3e;
+  --event-gold:#8c5510;
+  background:url("images/haldi-ceremony.svg") center / 100% 100% no-repeat;
+  border-color:#a46b18;
+}
+.haldi:before{border-color:rgba(116,50,16,.28)}
+.haldi:after{content:"";width:42px;height:42px;border:1px solid rgba(116,50,16,.22);border-radius:50%;right:28px;bottom:22px}
+.haldi .symbol{color:#8f4f0b}
+
+/* Sangeet — jewel plum, dhol, hanging bells and shimmer */
+.sangeet{
+  --event-ink:#fff4df;
+  --event-muted:#ead8d6;
+  --event-gold:#efca72;
+  background:url("images/sangeet-ceremony.svg") center / 100% 100% no-repeat;
+  border-color:rgba(239,202,114,.62);
+}
+.sangeet:before{border-color:rgba(239,202,114,.34)}
+.sangeet:after{content:"✦";font-size:28px;color:rgba(239,202,114,.34)}
+.sangeet .symbol{color:#efca72}
+
+/* Wedding — kumkum maroon, mandap arch and sacred lamps */
+.wedding{
+  --event-ink:#fff5e3;
+  --event-muted:#f0ddd2;
+  --event-gold:#f0ca72;
+  background:url("images/wedding-ceremony.svg") center / 100% 100% no-repeat;
+  border-color:rgba(240,202,114,.65);
+}
+.wedding:before{border-color:rgba(240,202,114,.38)}
+.wedding:after{content:"";width:36px;height:36px;border:1px solid rgba(240,202,114,.28);border-radius:50%;right:28px;bottom:20px}
+.wedding .symbol{color:#f0ca72}
+
+/* Reception — midnight, lanterns, floral corners, art-deco mood */
+.reception{
+  --event-ink:#fff5e1;
+  --event-muted:#e4d9d1;
+  --event-gold:#f0ca72;
+  background:url("images/reception-ceremony.svg") center / 100% 100% no-repeat;
+  border-color:rgba(240,202,114,.58);
+}
+.reception:before{border-color:rgba(240,202,114,.34)}
+.reception:after{content:"✧";font-size:27px;color:rgba(240,202,114,.34)}
+.reception .symbol{color:#f0ca72}
+
+/* ---------- Gallery ---------- */
+.gallery{text-align:center}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:50px;
+}
+.grid .photo{min-height:250px}
+.grid .tall{grid-row:span 2;min-height:514px}
+.grid .wide{grid-column:span 2}
+
+/* ---------- Family blessing page ---------- */
+.family{
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 0,rgba(200,155,75,.10),transparent 32%),
+    var(--paper);
+  border-block:1px solid var(--line);
+}
+.family:before,.family:after{
+  content:"❧";
+  position:absolute;
+  top:44%;
+  color:rgba(101,21,43,.10);
+  font:400 130px/1 "Cormorant Garamond",serif;
+}
+.family:before{left:-18px;transform:rotate(-25deg)}
+.family:after{right:-18px;transform:rotate(25deg) scaleX(-1)}
+.family .section{position:relative;z-index:1}
+.family .kicker{color:#9b7137}
+.family h2{color:var(--maroon-ink)}
+.family h2 em{color:#a47731}
+.family-grid{
+  position:relative;
+  max-width:880px;
+  margin:48px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+.family-grid:before{
+  content:"✦";
+  position:absolute;
+  z-index:2;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  background:var(--paper);
+  color:var(--gold);
+  font-size:15px;
+}
+.family-grid>div{
+  position:relative;
+  padding:38px 30px;
+  background:#fffaf1;
+  border:1px solid var(--line);
+  box-shadow:0 18px 42px rgba(64,27,35,.07);
+}
+.family-grid>div:before{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(200,155,75,.32);
+  pointer-events:none;
+}
+.family-grid small{
+  font-size:9px;
+  letter-spacing:2px;
+  color:#9b7137;
+}
+.family-grid h3{
+  margin-top:7px;
+  font:500 34px/1.05 "Cormorant Garamond",serif;
+  color:var(--maroon);
+}
+.family-grid p{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ---------- RSVP / footer ---------- */
+.rsvp{
+  padding:115px 20px;
+  text-align:center;
+  background:var(--maroon-deep);
+  color:#fff;
+}
+.rsvp .kicker{color:#d5ae62}
+.rsvp h2{color:#fff3df}
+.rsvp h2 em{color:#e8c878}
+.rsvp-intro{
+  max-width:560px;
+  margin:28px auto 24px;
+  color:#eadbd4;
+  font:400 18px "Cormorant Garamond",serif;
+}
+.rsvp-button{
+  display:inline-block;
+  margin-top:8px;
+  padding:14px 30px;
+  border:1px solid #e2c373;
+  background:#e2c373;
+  color:#3c1020;
+  font:700 10px Manrope;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.rsvp-button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px #0005;
+}
+footer{
+  padding:55px 20px;
+  text-align:center;
+  color:#d6bca5;
+  background:#250711;
+}
+footer>div{color:#c79a45;letter-spacing:9px}
+footer h3{margin:10px;font:400 42px "Great Vibes";color:#fff}
+footer p{font-size:10px;letter-spacing:2px}
+footer small{display:block;margin-top:18px;opacity:.5}
+
+/* ---------- Motion ---------- */
+.hero-inner{animation:heroRise 1.05s cubic-bezier(.2,.8,.2,1) both}
+.hero .eyebrow{animation:fadeUp .7s .1s both}
+.hero .small{animation:fadeUp .7s .22s both}
+.hero h1{animation:heroTitle 1s .3s both}
+.hero .gold{animation:fadeUp .7s .52s both}
+.hero-welcome{animation:fadeUp .7s .64s both}
+.hero-ganesh-divider,.hero .date,.hero .place,.hero .down{animation:fadeUp .7s .78s both}
+@keyframes heroRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes heroTitle{from{opacity:0;transform:scale(.94);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+.event.reveal{opacity:0;transform:translateY(36px)}
+.event.reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
+  .event.reveal{opacity:1!important;transform:none!important}
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1050px){
+  .hero-inner{width:min(590px,58vw);margin-left:38px}
+  .hero h1{font-size:clamp(62px,8vw,104px)}
+}
+@media(max-width:720px){
+  .hero{
+    place-items:center;
+    background:
+      linear-gradient(180deg,rgba(20,3,9,.18),rgba(35,5,13,.34) 45%,rgba(18,3,8,.76) 100%),
+      url("images/opening-mandap (1).webp") 63% center/cover no-repeat;
+  }
+  .hero:before{inset:11px}
+  .hero:after{inset:20px}
+  .hero nav{display:none}
+  .hero-inner{
+    width:100%;
+    max-width:100%;
+    margin:0;
+    min-height:100dvh;
+    padding:72px 20px 118px;
+  }
+  .hero-ganesh{width:60px;height:60px;margin-bottom:4px}
+  .hero .eyebrow{
+    max-width:330px;
+    padding:7px 10px 6px;
+    font-size:8.5px;
+    letter-spacing:1.5px;
+  }
+  .hero .small{max-width:340px;font-size:18px}
+  .hero h1{
+    max-width:100%;
+    margin:16px 0 13px;
+    font-size:clamp(55px,17vw,83px);
+    line-height:.86;
+    white-space:normal;
+  }
+  .hero h1 i{margin:0 5px}
+  .hero-welcome{
+    max-width:340px;
+    margin-top:15px;
+    font-size:16px;
+    line-height:1.4;
+  }
+  .hero-ganesh-divider{gap:7px;margin-top:14px}
+  .hero-ganesh-divider:before,.hero-ganesh-divider:after{width:27px}
+  .hero-ganesh-divider svg{width:32px;height:32px;flex-basis:32px}
+  .hero-ganesh-divider .ganesh-mantra{font-size:10px;letter-spacing:.7px}
+  .hero .date{
+    margin-top:14px;
+    padding:6px 11px 4px;
+    font-size:17px;
+    letter-spacing:1.7px;
+  }
+  .hero .place{font-size:9px;letter-spacing:1.5px}
+  .hero .down{margin-top:18px;padding:9px 14px}
+  .hero-arch{
+    right:-45%;
+    top:44%;
+    width:125%;
+    height:48%;
+    opacity:.18;
+  }
+  .rangoli{
+    left:50%;
+    top:67%;
+    width:105vw;
+    height:105vw;
+    opacity:.20;
+  }
+  .o1{left:-120px;bottom:-110px;font-size:220px}
+  .o2{right:-110px;top:170px;font-size:180px}
+
+  .section{padding:78px 20px}
+  .story-grid{grid-template-columns:1fr;gap:35px}
+  .copy{text-align:center}
+  .timeline{grid-template-columns:1fr;margin-top:44px}
+  .count{padding:60px 15px}
+  .count #clock{gap:17px}
+  .count b{font-size:36px}
+  .count span{font-size:7px}
+
+  .event{
+    grid-template-columns:38px 1fr;
+    gap:10px 13px;
+    padding:34px 22px;
+    margin-top:28px;
+  }
+  .event:before{inset:8px}
+  .event>strong{font-size:27px}
+  .symbol{
+    grid-column:2;
+    text-align:left;
+    font-size:44px;
+  }
+  .event>div:last-child{grid-column:2}
+  .event h3{font-size:48px}
+  .facts{gap:16px 20px}
+  .facts span{min-width:88px}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid .tall{min-height:400px}
+  .grid .wide{grid-column:span 2}
+  .family-grid{grid-template-columns:1fr}
+  .family-grid:before{display:none}
+  .family-grid>div{padding:34px 25px}
+  .rsvp{padding:90px 20px}
+}
+@media(max-width:390px){
+  .hero-inner{padding:64px 17px 105px}
+  .hero .small{font-size:17px}
+  .hero h1{font-size:clamp(49px,16vw,66px)}
+  .hero-welcome{font-size:15px;max-width:315px}
+  .hero .date{font-size:16px}
+  .event{padding:30px 18px}
+  .event h3{font-size:44px}
+  .tag{font-size:19px}
+}
+
+/* ---------- Final invitation refinement ---------- */
+.story{background:radial-gradient(circle at 50% 0,rgba(200,155,75,.06),transparent 34%),var(--paper)}
+.timeline{position:relative;display:block;max-width:920px;margin:62px auto 20px;padding:4px 0}
+.timeline:before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,var(--gold) 8%,var(--gold) 92%,transparent);opacity:.7}
+.timeline-item{width:calc(50% - 34px);margin:0 0 28px;padding:24px 28px;background:rgba(255,250,242,.92);border:1px solid rgba(200,155,75,.34);box-shadow:0 14px 35px rgba(69,30,35,.055)}
+.timeline-item:nth-child(odd){margin-right:auto}.timeline-item:nth-child(even){margin-left:auto}.timeline-item:before{display:none}
+.timeline-item:after{content:"";position:absolute;top:29px;width:11px;height:11px;border:1px solid var(--gold);background:var(--paper);transform:rotate(45deg)}
+.timeline-item:nth-child(odd):after{right:-41px}.timeline-item:nth-child(even):after{left:-41px}
+.timeline-mark{position:absolute;top:20px;font-size:15px;color:var(--gold);opacity:.85}.timeline-item:nth-child(odd) .timeline-mark{right:22px}.timeline-item:nth-child(even) .timeline-mark{left:22px}
+.timeline-item h3{font-size:30px}.timeline-item p{font-size:16px}
+.count{padding:68px 20px 62px;background:linear-gradient(90deg,rgba(116,27,53,.035),transparent 22%,transparent 78%,rgba(116,27,53,.035)),#f0e2cf;border-block:1px solid #d9c4a2}
+.count-ornament{margin-bottom:10px;color:#b68a43;font:500 10px Manrope;letter-spacing:4px;opacity:.9}.count-date{margin-top:24px;color:#8e6936;font:700 9px Manrope;letter-spacing:3px}
+.tradition-strip{padding:38px 20px 34px;background:linear-gradient(90deg,#360918,#6e1934 50%,#2a0612),repeating-linear-gradient(90deg,transparent 0 13px,rgba(228,197,111,.08) 13px 14px)}
+.paithani-rule{width:min(520px,80%);margin:0 auto 15px;display:flex;align-items:center;gap:10px;color:#d7b366;opacity:.8}.paithani-rule i{height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(215,179,102,.7))}.paithani-rule i:nth-of-type(2){background:linear-gradient(90deg,rgba(215,179,102,.7),transparent)}.paithani-rule span{font-size:8px}.tradition-strip .paithani-rule:last-child{margin:17px auto 0}
+.celebration-invocation{display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 20px;color:#a47731;font:500 15px "Cormorant Garamond",serif;letter-spacing:2px}.celebration-invocation span{color:#c49a4d;font-size:14px}.celebration-invocation b{font-weight:600}
+.family{background:radial-gradient(circle at 50% 0,rgba(200,155,75,.13),transparent 34%),linear-gradient(180deg,#f4e7d5,#eee0ca)}.family-grid>div{background:#fffaf1}.family-grid p{font:400 17px/1.45 "Cormorant Garamond",serif}.family-grid p span{display:block}.family-grid p span+span{margin-top:5px}.family .kicker{color:#8f6731}.family h2{color:#64152b}.family h2 em{color:#a47731}
+footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{color:#e0cba9;opacity:.72;letter-spacing:1px}
+@media(max-width:720px){
+.timeline{padding-left:24px}.timeline:before{left:10px}.timeline-item,.timeline-item:nth-child(odd),.timeline-item:nth-child(even){width:calc(100% - 10px);margin:0 0 22px 0}.timeline-item:after,.timeline-item:nth-child(odd):after,.timeline-item:nth-child(even):after{left:-20px;right:auto;top:28px;width:10px;height:10px}.timeline-item:nth-child(odd) .timeline-mark,.timeline-item:nth-child(even) .timeline-mark{right:18px;left:auto}.celebration-invocation{margin-bottom:16px}.count-ornament{letter-spacing:2px}
+}
+
+/* ---------- Save-the-dates calendar suite ---------- */
+.save-dates{
+  position:relative;
+  overflow:hidden;
+  padding:96px 28px;
+  background:
+    radial-gradient(circle at 84% 18%,rgba(200,155,75,.14),transparent 28%),
+    linear-gradient(135deg,#f8eddb,#efe0ca 56%,#f8efe2);
+  border-block:1px solid #d9c4a2;
+}
+.save-dates:before,.save-dates:after{
+  content:"❧";
+  position:absolute;
+  color:rgba(101,21,43,.08);
+  font:400 150px/1 "Cormorant Garamond",serif;
+}
+.save-dates:before{left:-30px;top:18px;transform:rotate(-20deg)}
+.save-dates:after{right:-28px;bottom:-5px;transform:rotate(160deg) scaleX(-1)}
+.save-dates-inner{
+  position:relative;
+  z-index:1;
+  max-width:1060px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:65px;
+  align-items:center;
+}
+.save-dates-copy{text-align:left}
+.save-dates-copy .kicker{color:#936b31}
+.save-dates h2{
+  margin-top:7px;
+  font:500 clamp(50px,6vw,72px)/.95 "Cormorant Garamond",serif;
+  color:var(--maroon-ink);
+}
+.save-dates h2 em{color:#a47731}
+.save-dates-copy>p:not(.kicker){
+  max-width:620px;
+  margin-top:19px;
+  color:var(--muted);
+  font:400 19px/1.45 "Cormorant Garamond",serif;
+}
+.calendar-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:25px;
+}
+.calendar-button{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:10px 14px;
+  border:1px solid #b99659;
+  color:var(--maroon);
+  background:rgba(255,250,242,.65);
+  font:700 9px Manrope,sans-serif;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+  transition:transform .25s ease,background .25s ease;
+}
+.calendar-button span{font-size:12px}
+.calendar-button:hover{transform:translateY(-2px);background:#fffaf1}
+.calendar-button.primary{color:#fff6e7;background:var(--maroon);border-color:var(--maroon)}
+.calendar-button.primary:hover{background:#4f0f22}
+.calendar-events{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  margin-top:30px;
+  border:1px solid #d8c4a5;
+  background:#d8c4a5;
+}
+.calendar-events>div{
+  min-height:96px;
+  padding:16px 17px;
+  background:rgba(255,250,242,.88);
+}
+.calendar-events small{
+  display:block;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#a47731;
+}
+.calendar-events b{
+  display:block;
+  margin-top:5px;
+  font:600 16px/1.15 "Cormorant Garamond",serif;
+  color:var(--maroon);
+}
+.calendar-events span{
+  display:block;
+  margin-top:5px;
+  font-size:9px;
+  line-height:1.4;
+  color:var(--muted);
+}
+.calendar-qr-wrap{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:310px;
+}
+.calendar-qr-frame{
+  width:245px;
+  padding:18px 18px 16px;
+  text-align:center;
+  background:#fffaf1;
+  border:1px solid #c89b4b;
+  box-shadow:0 20px 45px rgba(69,30,35,.12);
+}
+.calendar-qr-frame:before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(200,155,75,.32);
+  pointer-events:none;
+}
+.calendar-qr-label{
+  margin-bottom:10px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  color:#8f6731;
+}
+.calendar-qr{
+  display:block;
+  width:180px;
+  height:180px;
+  margin:auto;
+  padding:6px;
+  background:#fffaf1;
+  border:1px solid #e0cfb2;
+}
+.calendar-qr-caption{
+  margin-top:10px;
+  font:500 12px/1.25 "Cormorant Garamond",serif;
+  color:var(--maroon);
+}
+.calendar-seal{
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:88px;
+  height:88px;
+  display:grid;
+  place-items:center;
+  padding:10px;
+  text-align:center;
+  border:1px solid #c89b4b;
+  border-radius:50%;
+  background:#f6ead7;
+  box-shadow:0 8px 22px rgba(69,30,35,.10);
+  color:var(--maroon);
+}
+.calendar-seal:before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px dashed rgba(101,21,43,.28);
+  border-radius:50%;
+}
+.calendar-seal span{font-size:7px;letter-spacing:1px;color:#a47731}
+.calendar-seal b{font:600 8px/1.1 Manrope,sans-serif;letter-spacing:1px}
+
+@media(max-width:720px){
+  .save-dates{padding:76px 20px}
+  .save-dates-inner{grid-template-columns:1fr;gap:42px}
+  .save-dates-copy{text-align:center}
+  .save-dates-copy>p:not(.kicker){margin-left:auto;margin-right:auto;font-size:18px}
+  .calendar-actions{justify-content:center}
+  .calendar-events{text-align:left;grid-template-columns:1fr}
+  .calendar-qr-wrap{min-height:280px}
+  .calendar-seal{right:calc(50% - 155px);bottom:-8px}
+}
+
+/* ---------- Calendar invite near RSVP ---------- */
+.save-dates{
+  padding:76px 28px;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(200,155,75,.13),transparent 28%),
+    linear-gradient(135deg,#f8eddb,#efe0ca 56%,#f8efe2);
+  border-block:1px solid #d9c4a2;
+}
+.save-dates-inner{
+  max-width:980px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 190px;
+  gap:48px;
+  align-items:center;
+}
+.save-dates-copy{text-align:left}
+.save-dates-copy .kicker{color:#936b31}
+.save-dates h2{
+  margin-top:7px;
+  font:500 clamp(46px,5vw,64px)/.95 "Cormorant Garamond",serif;
+  color:var(--maroon-ink);
+}
+.save-dates h2 em{color:#a47731}
+.save-dates-copy>p:not(.kicker){
+  max-width:620px;
+  margin-top:17px;
+  color:var(--muted);
+  font:400 18px/1.45 "Cormorant Garamond",serif;
+}
+.calendar-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}
+.calendar-button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 13px;
+  border:1px solid #b99659;
+  color:var(--maroon);
+  background:rgba(255,250,242,.7);
+  font:700 9px Manrope,sans-serif;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.calendar-button span{font-size:12px}
+.calendar-button.primary{color:#fff6e7;background:var(--maroon);border-color:var(--maroon)}
+.calendar-card{
+  width:170px;
+  height:170px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  text-align:center;
+  border:1px solid #c89b4b;
+  outline:1px solid rgba(200,155,75,.35);
+  outline-offset:-8px;
+  background:#fffaf1;
+  box-shadow:0 18px 38px rgba(69,30,35,.10);
+  color:var(--maroon);
+}
+.calendar-card span{font-size:14px;color:#b68a43}
+.calendar-card b{font:500 42px/.9 "Cormorant Garamond",serif}
+.calendar-card small{font:700 8px Manrope,sans-serif;letter-spacing:2px;color:#936b31}
+.calendar-card i{font:700 7px Manrope,sans-serif;letter-spacing:1.4px;font-style:normal;color:#9b7b52}
+@media(max-width:720px){
+  .save-dates{padding:64px 20px}
+  .save-dates-inner{grid-template-columns:1fr;gap:26px}
+  .save-dates-copy{text-align:center}
+  .save-dates-copy>p:not(.kicker){margin-left:auto;margin-right:auto;font-size:17px}
+  .calendar-actions{justify-content:center}
+  .calendar-card{width:145px;height:145px}
+  .calendar-card b{font-size:37px}
+}
+
+/* ---------- Mobile ceremony card correction ---------- */
+@media(max-width:720px){
+  /*
+    Phone cards are one continuous canvas.
+    The ceremony artwork remains the decorative upper portion,
+    but its base colour continues through the full card so there
+    is no separate cream/purple panel fighting with the artwork.
+  */
+  .event{
+    display:block;
+    width:100%;
+    max-width:560px;
+    min-height:0;
+    margin:30px auto 0;
+    padding:154px 22px 30px;
+    background-position:center top;
+    background-size:100% 140px;
+    background-repeat:no-repeat;
+    overflow:hidden;
+  }
+
+  .event:before{
+    inset:8px;
+    z-index:1;
+  }
+
+  .event>strong{
+    position:absolute;
+    top:20px;
+    left:25px;
+    z-index:4;
+    padding:0;
+    font-size:27px;
+    line-height:1;
+  }
+
+  .event .symbol{
+    position:absolute;
+    top:17px;
+    right:24px;
+    z-index:4;
+    font-size:37px;
+    line-height:1;
+    text-align:right;
+  }
+
+  .event>div:last-child{
+    position:relative;
+    z-index:4;
+    width:100%;
+  }
+
+  .event small{
+    display:block;
+    max-width:100%;
+    font-size:7.5px;
+    line-height:1.4;
+    letter-spacing:1.35px;
+    white-space:normal;
+  }
+
+  .event h3{
+    margin-top:5px;
+    font-size:46px;
+    line-height:.95;
+  }
+
+  .event .tag{
+    margin-top:7px;
+    font-size:19px;
+    line-height:1.12;
+  }
+
+  .event .facts{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px 18px;
+    margin:20px 0 18px;
+  }
+
+  .event .facts span{
+    min-width:0;
+    font-size:8px;
+    line-height:1.25;
+    letter-spacing:1px;
+  }
+
+  .event .facts span:last-child{grid-column:1 / -1}
+
+  .event .facts b{
+    display:block;
+    margin-bottom:3px;
+    font-size:12px;
+    line-height:1.2;
+    letter-spacing:0;
+    overflow-wrap:anywhere;
+  }
+
+  .event .note{
+    margin-top:18px;
+    max-width:none;
+    font-size:12px;
+    line-height:1.45;
+  }
+
+  .event .map{
+    margin-top:2px;
+    padding:9px 13px;
+    font-size:8px;
+    letter-spacing:1.35px;
+  }
+
+  /* Continue each artwork's own colour below its illustration. */
+  .haldi{background-color:#e9a50d!important}
+  .sangeet{background-color:#281034!important}
+  .wedding{background-color:#4b071a!important}
+  .reception{background-color:#081323!important}
+
+  .sangeet h3,.sangeet .tag,.sangeet .facts b,.sangeet .facts span,.sangeet .note,
+  .wedding h3,.wedding .tag,.wedding .facts b,.wedding .facts span,
+  .reception h3,.reception .tag,.reception .facts b,.reception .facts span{
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
+  }
+
+  /* Calendar is a compact phone section with no awkward heading wrap. */
+  .save-dates{
+    padding:58px 18px 50px;
+    overflow:hidden;
+  }
+  .save-dates-inner{
+    display:block;
+    width:100%;
+    max-width:560px;
+  }
+  .save-dates-copy{text-align:center}
+  .save-dates h2{
+    margin:7px auto 0;
+    max-width:100%;
+    font-size:clamp(40px,11.5vw,52px);
+    line-height:.92;
+    letter-spacing:0;
+  }
+  .save-dates h2 em{white-space:nowrap}
+  .save-dates-copy>p:not(.kicker){
+    max-width:330px;
+    margin:16px auto 0;
+    font-size:16px;
+    line-height:1.42;
+  }
+  .calendar-actions{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+    margin:20px auto 0;
+  }
+  .calendar-button{
+    width:100%;
+    min-height:42px;
+    justify-content:center;
+    padding:10px 12px;
+    font-size:8.5px;
+    letter-spacing:1.1px;
+  }
+  .calendar-card{
+    width:138px;
+    height:138px;
+    margin:25px auto 0;
+  }
+  .calendar-card b{font-size:35px;line-height:.9}
+  .calendar-card small{font-size:7px;letter-spacing:1.6px}
+  .calendar-card i{font-size:6.5px;letter-spacing:1px}
+
+  .family .section{padding-top:72px;padding-bottom:72px}
+  .family-grid{margin-top:34px}
+  .family-grid>div{padding:32px 22px}
+  .family-grid h3{font-size:31px}
+  .rsvp{padding:76px 18px}
+  .rsvp h2{font-size:clamp(48px,13vw,64px);line-height:.92}
+}
+
+@media(max-width:390px){
+  .event{
+    padding:150px 18px 27px;
+    margin-top:26px;
+  }
+  .event>strong{left:21px;top:19px;font-size:25px}
+  .event .symbol{right:20px;top:16px;font-size:34px}
+  .event h3{font-size:42px}
+  .event .tag{font-size:18px}
+  .event .facts{gap:13px 14px}
+  .event .facts b{font-size:11px}
+  .save-dates h2{font-size:clamp(38px,11.5vw,49px)}
+}
+
+/* ---------- Unified single-card ceremony redesign ---------- */
+.event{--event-ink:#fff8eb;--event-muted:#eadfd6;--event-gold:#efca72;position:relative;display:block;width:min(760px,100%);max-width:760px;min-height:760px;margin:48px auto 0;padding:305px 72px 52px;text-align:center;overflow:hidden;border:1px solid rgba(228,197,111,.65);border-radius:2px;box-shadow:0 26px 70px rgba(49,12,25,.14);isolation:isolate;background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+.event:hover{transform:translateY(-4px);box-shadow:0 32px 78px rgba(49,12,25,.18)}
+.event:before{inset:12px;z-index:2;border:1px solid rgba(255,255,255,.32)}
+.event:after{display:none}
+.event>strong{position:absolute;top:34px;left:36px;z-index:5;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid var(--event-gold);border-radius:50%;background:rgba(28,8,20,.18);font:600 23px/1 "Cormorant Garamond",serif;color:var(--event-gold)}
+.event .symbol{position:absolute;top:36px;right:40px;z-index:5;font:400 34px/1 "Cormorant Garamond",serif;color:var(--event-gold);text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.event>div:last-child{position:relative;z-index:5;width:100%;max-width:610px;margin:0 auto}
+.event small{display:block;font-size:9px;line-height:1.4;font-weight:700;letter-spacing:2.2px;color:var(--event-muted)}
+.event h3{margin-top:10px;font:500 clamp(60px,7vw,82px)/.88 "Cormorant Garamond",serif;color:var(--event-ink);text-shadow:0 3px 20px rgba(0,0,0,.18)}
+.event .tag{margin:13px auto 0;max-width:500px;font:400 23px/1.15 "Cormorant Garamond",serif;color:var(--event-ink)}
+.event .tag:before{content:"";display:block;width:90px;height:1px;margin:0 auto 13px;background:linear-gradient(90deg,transparent,var(--event-gold),transparent)}
+.event .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:34px auto 22px;max-width:570px}
+.event .facts span{display:flex;flex-direction:column;align-items:center;min-width:0;font-size:9px;line-height:1.35;text-transform:uppercase;letter-spacing:1.4px;color:var(--event-muted)}
+.event .facts span:last-child{grid-column:1/-1;margin-top:2px}
+.event .facts b{margin-bottom:5px;font:700 13px/1.25 Manrope,sans-serif;color:var(--event-ink);text-transform:none;letter-spacing:0}
+.event .map{display:inline-flex;align-items:center;justify-content:center;min-width:175px;padding:11px 20px;border:1px solid var(--event-gold);border-radius:999px;color:var(--event-gold);background:rgba(15,5,15,.08);font:700 9px Manrope,sans-serif;letter-spacing:1.7px;text-transform:uppercase}
+.event .note{max-width:500px;margin:26px auto 0;font-size:13px;line-height:1.5;color:var(--event-muted)}
+.haldi{--event-ink:#4a1b10;--event-muted:#704f38;--event-gold:#8b520c;background:url("images/haldi-ceremony.svg") center/100% 100% no-repeat;border-color:#a96c15}
+.sangeet{--event-ink:#fff5df;--event-muted:#e8d8d7;--event-gold:#efca72;background:url("images/sangeet-ceremony.svg") center/100% 100% no-repeat}
+.wedding{--event-ink:#fff4df;--event-muted:#ecd9d0;--event-gold:#f0ca72;background:url("images/wedding-ceremony.svg") center/100% 100% no-repeat}
+.reception{--event-ink:#fff4df;--event-muted:#ded9d3;--event-gold:#f0ca72;background:url("images/reception-ceremony.svg") center/100% 100% no-repeat}
+@media(max-width:720px){
+ .events{padding-left:14px;padding-right:14px}.events>h2{font-size:clamp(42px,12.5vw,54px);line-height:.94}
+ .event{width:100%;max-width:520px;min-height:0;margin-top:30px;padding:270px 24px 36px;background-size:100% 100%;border-radius:2px}
+ .event:before{inset:8px}.event>strong{top:25px;left:25px;width:38px;height:38px;font-size:21px}.event .symbol{top:28px;right:27px;font-size:30px}.event>div:last-child{max-width:100%}
+ .event small{font-size:7.2px;letter-spacing:1.35px}.event h3{font-size:clamp(48px,15vw,64px);line-height:.9}.event .tag{font-size:20px;line-height:1.12;margin-top:11px}.event .tag:before{margin-bottom:11px;width:72px}
+ .event .facts{gap:18px 10px;margin:28px auto 20px}.event .facts span{font-size:7.5px;letter-spacing:1px}.event .facts b{font-size:11px;line-height:1.3}
+ .event .note{font-size:11.5px;line-height:1.45;margin-top:20px}.event .map{min-width:0;width:min(220px,100%);padding:10px 14px;font-size:8px;letter-spacing:1.35px}
+ .haldi,.sangeet,.wedding,.reception{background-size:100% 100%!important}
+}
+@media(max-width:390px){
+ .event{padding:250px 18px 30px}.event>strong{left:20px;top:22px;width:35px;height:35px;font-size:20px}.event .symbol{right:21px;top:25px;font-size:28px}.event h3{font-size:48px}.event .tag{font-size:18px}.event .facts{gap:16px 8px}.event .facts b{font-size:10.5px}
+}
+/* ---------- Lively countdown ---------- */
+#clock{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:760px;margin:28px auto 22px}
+#clock>div{position:relative;padding:22px 12px 16px;border:1px solid rgba(199,154,69,.42);background:rgba(255,248,233,.58);box-shadow:0 12px 28px rgba(74,27,16,.08);overflow:hidden}
+#clock>div:before{content:"";position:absolute;inset:6px;border:1px solid rgba(199,154,69,.22);pointer-events:none}
+#clock>div:after{content:"";position:absolute;top:-45%;left:-25%;width:150%;height:100%;background:radial-gradient(circle,rgba(255,214,115,.26),transparent 58%);animation:countGlow 3.8s ease-in-out infinite}
+#clock>div:nth-child(2):after{animation-delay:.7s}#clock>div:nth-child(3):after{animation-delay:1.4s}#clock>div:nth-child(4):after{animation-delay:2.1s}
+#clock b,#clock span{position:relative;z-index:2}
+#clock b{display:block;font:500 clamp(42px,5vw,62px)/.9 "Cormorant Garamond",serif;color:#741b35;letter-spacing:-1px}
+#clock span{display:block;margin-top:9px;font:700 8px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#9a6e34}
+@keyframes countGlow{0%,100%{transform:translateX(-8%) scale(.9);opacity:.35}50%{transform:translateX(8%) scale(1.05);opacity:.8}}
+@media(max-width:720px){
+ #clock{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:22px auto 18px;padding:0 2px}
+ #clock>div{padding:17px 5px 13px}
+ #clock>div:before{inset:4px}
+ #clock b{font-size:clamp(28px,9.5vw,42px)}
+ #clock span{font-size:6px;letter-spacing:1px;margin-top:7px}
+}
+@media(max-width:390px){#clock{gap:5px}#clock>div{padding:15px 3px 11px}#clock b{font-size:30px}#clock span{font-size:5.5px}}
+
+/* ---------- Final ceremony artwork system ----------
+   Rich raster artwork is used as a sprite; HTML remains responsible for all typography/details.
+   Each event is one continuous card, with the artwork fading naturally into its own paper colour.
+*/
+.event{
+  --event-bg:#2b102f;
+  position:relative;
+  width:min(760px,100%);
+  max-width:760px;
+  min-height:760px;
+  margin:48px auto 0;
+  padding:360px 72px 54px;
+  background-color:var(--event-bg);
+  background-repeat:no-repeat;
+  background-position:center top,left top;
+  background-size:100% 390px,200% 780px;
+  border:1px solid rgba(228,197,111,.72);
+  border-radius:3px;
+  box-shadow:0 26px 70px rgba(49,12,25,.16);
+  overflow:hidden;
+  isolation:isolate;
+}
+.event:before{inset:10px;z-index:2;border:1px solid rgba(255,255,255,.34);pointer-events:none}
+.event:after{display:none}
+.event>div:last-child{position:relative;z-index:5}
+.event .symbol{display:none}
+.haldi{
+  --event-bg:#f3d27d;--event-ink:#4a1b10;--event-muted:#73533a;--event-gold:#8d560f;
+  background-image:linear-gradient(to bottom,transparent 0%,transparent 57%,rgba(243,210,125,.12) 68%,#f3d27d 100%),url("images/ceremony-sprite.webp");
+  background-position:center top,left top;
+}
+.sangeet{
+  --event-bg:#291034;--event-ink:#fff6e7;--event-muted:#ead9df;--event-gold:#efc96f;
+  background-image:linear-gradient(to bottom,transparent 0%,transparent 57%,rgba(41,16,52,.22) 72%,#291034 100%),url("images/ceremony-sprite.webp");
+  background-position:center top,right top;
+}
+.wedding{
+  --event-bg:#57091d;--event-ink:#fff3df;--event-muted:#edd9d0;--event-gold:#f0c96f;
+  background-image:linear-gradient(to bottom,transparent 0%,transparent 57%,rgba(87,9,29,.22) 72%,#57091d 100%),url("images/ceremony-sprite.webp");
+  background-position:center top,left bottom;
+}
+.reception{
+  --event-bg:#081c33;--event-ink:#fff4df;--event-muted:#dedbe0;--event-gold:#f0c96f;
+  background-image:linear-gradient(to bottom,transparent 0%,transparent 57%,rgba(8,28,51,.18) 72%,#081c33 100%),url("images/ceremony-sprite.webp");
+  background-position:center top,right bottom;
+}
+@media(max-width:720px){
+  .event{width:100%;max-width:560px;min-height:0;margin:30px auto 0;padding:232px 22px 34px;background-size:100% 232px,200% 464px;background-position:center top,left top}
+  .sangeet{background-position:center top,right top}
+  .wedding{background-position:center top,left bottom}
+  .reception{background-position:center top,right bottom}
+  .event>strong{top:23px;left:24px;width:38px;height:38px;font-size:21px}
+  .event h3{font-size:clamp(48px,14vw,62px)}
+  .event .tag{font-size:19px}
+  .event .facts{margin-top:24px}
+  .event .map{margin-top:4px}
+}
+@media(max-width:390px){
+  .event{padding:224px 18px 30px;background-size:100% 224px,200% 448px}
+  .event>strong{left:20px;top:21px;width:35px;height:35px;font-size:20px}
+  .event h3{font-size:46px}
+  .event .tag{font-size:18px}
+}
+
+/* FINAL CEREMONY CARD REFINEMENT */
+.event{
+  width:min(720px,100%);
+  max-width:720px;
+  min-height:660px;
+  padding:318px 58px 48px;
+  background-color:var(--event-bg);
+  background-repeat:no-repeat;
+  background-position:center top, left top;
+  background-size:100% 330px, 200% 660px;
+  border-radius:4px;
+}
+.event:before{inset:9px;border-color:rgba(255,255,255,.42)}
+.haldi{
+  --event-bg:#f6e0aa;--event-ink:#4a1b10;--event-muted:#76563a;--event-gold:#9a6518;
+  background-image:linear-gradient(to bottom,transparent 52%,rgba(246,224,170,.35) 78%,#f6e0aa 100%),url("images/ceremony-sprite.webp");
+  background-position:center top, left top;
+}
+.sangeet{
+  --event-bg:#291035;--event-ink:#fff5e5;--event-muted:#e8d8df;--event-gold:#efca72;
+  background-image:linear-gradient(to bottom,transparent 52%,rgba(41,16,53,.35) 78%,#291035 100%),url("images/ceremony-sprite.webp");
+  background-position:center top, right top;
+}
+.wedding{
+  --event-bg:#5a0b20;--event-ink:#fff3df;--event-muted:#edd8d0;--event-gold:#efc76b;
+  background-image:linear-gradient(to bottom,transparent 52%,rgba(90,11,32,.35) 78%,#5a0b20 100%),url("images/ceremony-sprite.webp");
+  background-position:center top, left bottom;
+}
+.reception{
+  --event-bg:#081d35;--event-ink:#fff4df;--event-muted:#ded9d1;--event-gold:#f0c86d;
+  background-image:linear-gradient(to bottom,transparent 52%,rgba(8,29,53,.28) 78%,#081d35 100%),url("images/ceremony-sprite.webp");
+  background-position:center top, right bottom;
+}
+@media(max-width:720px){
+  .events{padding-left:12px;padding-right:12px}
+  .event{
+    max-width:100%;
+    min-height:0;
+    margin-top:28px;
+    padding:222px 22px 34px;
+    background-size:100% 228px, 200% 456px;
+  }
+  .event h3{font-size:clamp(46px,13.5vw,60px)}
+  .event .tag{font-size:19px}
+  .event .facts{margin-top:25px}
+}
+@media(max-width:390px){
+  .event{padding:214px 18px 30px;background-size:100% 220px, 200% 440px}
+  .event h3{font-size:45px}
+  .event .tag{font-size:18px}
+}
+
+/* ---------- Final sprite crop fix: one artwork per card ---------- */
+.event{
+  background-image:none!important;
+  background-color:var(--event-bg)!important;
+  padding-top:318px;
+}
+.event:after{
+  content:"";
+  display:block;
+  position:absolute;
+  inset:0 auto auto 0;
+  width:100%;
+  height:330px;
+  z-index:1;
+  border:0!important;
+  border-radius:0!important;
+  right:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  font-size:0!important;
+  color:transparent!important;
+  background-repeat:no-repeat;
+  background-position:center top, left top;
+  background-size:100% 100%, 200% 200%;
+  background-image:linear-gradient(to bottom,transparent 72%,rgba(0,0,0,0) 80%,color-mix(in srgb,var(--event-bg) 28%,transparent) 91%,var(--event-bg) 100%),url("images/ceremony-sprite.webp");
+  pointer-events:none;
+}
+.haldi:after{background-position:center top,left top}
+.sangeet:after{background-position:center top,right top}
+.wedding:after{background-position:center top,left bottom}
+.reception:after{background-position:center top,right bottom}
+.event>strong,.event>div:last-child{z-index:5}
+@media(max-width:720px){
+  .event{padding-top:222px}
+  .event:after{height:228px}
+}
+@media(max-width:390px){
+  .event{padding-top:214px}
+  .event:after{height:220px}
+}
+
+/* Targeted restoration from c20709f: no new decorative system, only visibility and Marathi polish. */
+:root{--dev:"Tiro Devanagari Marathi","Noto Serif Devanagari","Mangal",serif}
+.marathi{font-family:var(--dev)}
+.hero .small{font-family:var(--dev);font-size:18px;letter-spacing:1px}
+.blessing{display:block;max-width:590px;margin-top:7px;font:400 21px/1.12 "Cormorant Garamond",serif;color:#fff1d6;text-shadow:0 2px 15px rgba(20,3,8,.95)}
+.traditional-names{margin-top:-5px;margin-bottom:7px;font-family:var(--dev);font-size:17px;line-height:1.3;color:#ffedcf;text-shadow:0 2px 12px rgba(0,0,0,.95)}
+.hero-line{max-width:560px}
+.story-note{max-width:760px;margin:62px auto 0;padding:31px 30px;text-align:center;background:#fffaf2;border:1px solid rgba(200,155,75,.36);box-shadow:0 18px 42px rgba(69,30,35,.055)}
+.story-note>img{width:min(410px,76%);margin:0 auto 16px;opacity:.65}
+.story-note p{font:400 20px/1.45 "Cormorant Garamond",serif;color:#5f5056}
+.story-note .story-marathi{font:500 17px/1.45 var(--dev);color:var(--maroon)}
+.story-note .sign{margin-top:15px;font-size:14px;color:var(--muted)}
+.story-note .sign b{font:400 34px "Great Vibes";color:var(--maroon)}
+.symbol{font-family:var(--dev);font-size:24px!important;letter-spacing:0}
+.celebration-invocation b{font-family:var(--dev)}
+@media(max-width:720px){
+  .hero .small{font-size:14px}
+  .blessing{font-size:18px;max-width:330px}
+  .traditional-names{font-size:14px}
+  .story-note{margin-top:44px;padding:27px 18px}
+  .story-note>img{width:82%;margin-bottom:13px}
+  .story-note p{font-size:18px}
+  .story-note .story-marathi{font-size:14px}
+  .story-note .sign b{font-size:31px}
+  .symbol{font-size:19px!important}
+}
+
+/* Photo rendering for uploaded couple photos */
+.story-grid .photo,
+.gallery .photo{isolation:isolate}
+.story-grid .photo img,
+.gallery .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+.story-grid .photo:before,
+.gallery .photo:before{z-index:1}
+@media(max-width:720px){
+  .story-grid .photo{max-width:520px;width:100%;margin:0 auto}
+  .gallery .grid{gap:12px}
+}
+
+
+/* ---------- Final couple-photo gallery alignment ---------- */
+.story-grid{
+  display:block;
+  max-width:860px;
+  margin:58px auto 0;
+}
+.story-grid .copy{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.story-grid .copy small{display:block}
+.story-grid .copy p{max-width:680px;margin-left:auto;margin-right:auto}
+
+.gallery .grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:repeat(2,240px);
+  gap:16px;
+  margin-top:50px;
+  grid-auto-flow:row;
+}
+.gallery .grid .photo{
+  min-height:0;
+  height:100%;
+  aspect-ratio:auto;
+}
+.gallery .grid .tall{
+  grid-column:1;
+  grid-row:1 / span 2;
+  min-height:0;
+}
+.gallery .grid .wide{
+  grid-column:auto;
+  grid-row:auto;
+}
+.gallery .grid .photo:before{
+  inset:10px;
+  border:1px solid rgba(200,155,75,.28);
+}
+.gallery .grid .photo img{
+  object-position:center center;
+  transition:transform .5s ease;
+}
+/* Keep the couple fully in frame in the two lower gallery photos. */
+.gallery .grid .photo:nth-child(4) img{object-position:center 24%}
+.gallery .grid .photo:nth-child(5) img{object-position:center 24%}
+.gallery .grid .photo:hover img{transform:scale(1.025)}
+
+@media(max-width:720px){
+  .story-grid{
+    margin-top:44px;
+  }
+  .story-grid .copy{
+    max-width:520px;
+  }
+  .gallery .grid{
+    grid-template-columns:1fr;
+    grid-template-rows:none;
+    gap:12px;
+    margin-top:34px;
+  }
+  .gallery .grid .photo,
+  .gallery .grid .tall,
+  .gallery .grid .wide{
+    grid-column:auto;
+    grid-row:auto;
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4/3;
+  }
+  .gallery .grid .tall{
+    aspect-ratio:4/5;
+  }
+}
+@media(max-width:390px){
+  .story-grid{margin-top:38px}
+  .gallery .grid{gap:10px}
+}
