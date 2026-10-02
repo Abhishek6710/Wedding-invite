@@ -1960,3 +1960,114 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     font-size:10.5px;
   }
 }
+
+
+/* ---------- Final ceremony composition: use the artwork's clear space ---------- */
+/* Haldi / Sangeet / Reception: move the entire information group higher so the
+   illustration and people remain visible instead of having text over the artwork. */
+.event>div:last-child{
+  top:20%!important;
+}
+
+/* Wedding is intentionally different: the header occupies the clear cream area;
+   the three event details sit around the couple, while venue + Maps stay centred. */
+.wedding>div:last-child{
+  top:16%!important;
+  left:7%!important;
+  right:7%!important;
+  text-align:center;
+}
+.wedding .facts.wedding-facts{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:14px 42px;
+  margin:18px auto 12px;
+  max-width:570px;
+  align-items:start;
+}
+.wedding .facts.wedding-facts span{
+  width:auto!important;
+  grid-column:auto!important;
+  grid-row:auto!important;
+  justify-self:stretch;
+}
+.wedding .facts.wedding-facts span:nth-child(1),
+.wedding .facts.wedding-facts span:nth-child(3){
+  grid-column:1;
+}
+.wedding .facts.wedding-facts span:nth-child(2){
+  grid-column:2;
+  grid-row:1 / span 2;
+  align-self:start;
+}
+.wedding .wedding-venue{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:4px;
+  text-align:center;
+}
+.wedding .wedding-venue>span{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  align-items:center;
+  color:var(--event-muted)!important;
+  font-size:9px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.wedding .wedding-venue>span b{
+  color:var(--event-ink)!important;
+  font-size:12px;
+  line-height:1.2;
+  letter-spacing:.4px;
+  text-transform:none;
+}
+.wedding .wedding-venue .map{
+  margin:2px auto 0!important;
+}
+
+@media(max-width:720px){
+  .event>div:last-child{
+    top:20%!important;
+  }
+  .wedding>div:last-child{
+    top:16%!important;
+    left:5%!important;
+    right:5%!important;
+  }
+  .wedding .facts.wedding-facts{
+    gap:11px 18px;
+    margin:14px auto 10px;
+  }
+  .wedding .wedding-venue{
+    margin-top:3px;
+    gap:6px;
+  }
+  .wedding .wedding-venue>span{
+    font-size:8px;
+  }
+  .wedding .wedding-venue>span b{
+    font-size:11px;
+  }
+}
+@media(max-width:390px){
+  .event>div:last-child{
+    top:19%!important;
+  }
+  .wedding>div:last-child{
+    top:15%!important;
+    left:4.5%!important;
+    right:4.5%!important;
+  }
+  .wedding .facts.wedding-facts{
+    gap:9px 12px;
+    margin-top:12px;
+  }
+  .wedding .wedding-venue>span b{
+    font-size:10.5px;
+  }
+}
