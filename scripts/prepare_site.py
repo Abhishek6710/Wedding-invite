@@ -1,7 +1,6 @@
 from pathlib import Path
 import re
 import shutil
-import urllib.request
 
 from PIL import Image, ImageOps
 
@@ -86,15 +85,6 @@ def create_preview() -> None:
     print(f"Preview created: {output}")
 
 
-def fetch_working_preview() -> None:
-    """Use the proven preview image from the working Wedding repo."""
-    output = DIST / "images" / "share-preview.jpg"
-    output.parent.mkdir(parents=True, exist_ok=True)
-    source_url = "https://raw.githubusercontent.com/Abhishek6710/Wedding/main/images/share-preview.jpg"
-    urllib.request.urlretrieve(source_url, output)
-    print(f"Preview copied from working repo: {output}")
-
-
 def replace_references() -> None:
     replacements = {
         "images/couple-story.jpg": "images/optimized/couple-story.webp",
@@ -169,7 +159,6 @@ def main() -> None:
 
     create_preview()
     replace_references()
-    fetch_working_preview()
     tune_index()
 
     print("Optimized site prepared in dist/")
