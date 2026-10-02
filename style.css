@@ -2573,3 +2573,58 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:210px!important;
   }
 }
+
+
+/* ---------- Wedding mobile final spacing ---------- */
+@media(max-width:720px){
+  /* Keep the message inside the artwork width. */
+  .wedding .tag{
+    max-width:88%!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    font-size:17px!important;
+    line-height:1.12!important;
+  }
+
+  /* Muhurat + Varat remain side-by-side. */
+  .wedding .facts.wedding-facts{
+    top:158px!important;
+    left:8%!important;
+    right:8%!important;
+    width:84%!important;
+    height:116px!important;
+    gap:10px 14px!important;
+  }
+
+  /* Dress gets its own clear row. */
+  .wedding .facts.wedding-facts span:nth-child(3){
+    grid-column:1 / -1!important;
+    margin:2px auto 0!important;
+  }
+
+  /* Venue is explicitly below Dress, never overlapping it. */
+  .wedding .wedding-venue{
+    top:274px!important;
+    gap:5px!important;
+  }
+
+  .wedding .wedding-venue .map{
+    margin-top:4px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .tag{
+    max-width:86%!important;
+    font-size:15.5px!important;
+  }
+
+  .wedding .facts.wedding-facts{
+    top:151px!important;
+    height:112px!important;
+  }
+
+  .wedding .wedding-venue{
+    top:267px!important;
+  }
+}
