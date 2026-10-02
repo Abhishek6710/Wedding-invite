@@ -2195,3 +2195,38 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:222px!important;
   }
 }
+
+
+/* ---------- Final artwork + vertical alignment ---------- */
+/* Use the alternate Wedding artwork. */
+.wedding{
+  background-image:url("images/Wedding-2.png")!important;
+}
+
+/* Bring the complete text composition slightly lower on every ceremony card. */
+.event>div:last-child{
+  top:23%!important;
+}
+
+/* Wedding keeps its special internal left/right + centred venue composition. */
+.wedding>div:last-child{
+  top:19%!important;
+}
+
+@media(max-width:720px){
+  .event>div:last-child{
+    top:23%!important;
+  }
+  .wedding>div:last-child{
+    top:19%!important;
+  }
+}
+
+@media(max-width:390px){
+  .event>div:last-child{
+    top:22%!important;
+  }
+  .wedding>div:last-child{
+    top:18%!important;
+  }
+}
