@@ -2823,3 +2823,38 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     margin-top:22px!important;
   }
 }
+
+
+/* ---------- Final Wedding mobile micro-adjustment ---------- */
+/* Lift only the two timing blocks and lower only the dress block.
+   Transforms do not change the grid's height, so the venue + Maps stay
+   exactly where they are. */
+@media(max-width:720px){
+  .wedding .facts.wedding-facts span:nth-child(1),
+  .wedding .facts.wedding-facts span:nth-child(3){
+    transform:translateY(-7px);
+  }
+
+  .wedding .facts.wedding-facts span:nth-child(2){
+    transform:translateY(8px);
+  }
+
+  /* Keep the dress text visually on its own line and prevent any wrap
+     from colliding with the neighbouring timing blocks. */
+  .wedding .facts.wedding-facts span:nth-child(2) b{
+    max-width:120px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts span:nth-child(1),
+  .wedding .facts.wedding-facts span:nth-child(3){
+    transform:translateY(-6px);
+  }
+
+  .wedding .facts.wedding-facts span:nth-child(2){
+    transform:translateY(7px);
+  }
+}
