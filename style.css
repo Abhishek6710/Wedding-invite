@@ -2727,3 +2727,99 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:238px!important;
   }
 }
+
+
+/* ---------- Final Wedding mobile layout: normal flow, no overlapping coordinates ---------- */
+@media(max-width:720px){
+  /* Keep the heading/message where they are, then let the event information
+     flow naturally like the clean Reception card. */
+  .wedding .facts.wedding-facts{
+    position:static!important;
+    width:100%!important;
+    height:auto!important;
+    display:grid!important;
+    grid-template-columns:1fr 1.25fr 1fr!important;
+    gap:8px!important;
+    margin:30px 0 0!important;
+    align-items:start!important;
+  }
+
+  .wedding .facts.wedding-facts span,
+  .wedding .facts.wedding-facts span:nth-child(1),
+  .wedding .facts.wedding-facts span:nth-child(2),
+  .wedding .facts.wedding-facts span:nth-child(3){
+    position:static!important;
+    grid-column:auto!important;
+    width:auto!important;
+    min-width:0!important;
+    margin:0!important;
+    text-align:center!important;
+  }
+
+  .wedding .facts.wedding-facts span:last-child{
+    grid-column:auto!important;
+  }
+
+  .wedding .facts.wedding-facts span{
+    font-size:6.8px!important;
+    line-height:1.2!important;
+    letter-spacing:.6px!important;
+  }
+
+  .wedding .facts.wedding-facts span b{
+    display:block!important;
+    margin-bottom:3px!important;
+    font-size:9.5px!important;
+    line-height:1.15!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+  }
+
+  /* Venue and Maps now follow the facts in normal document flow. */
+  .wedding .wedding-venue{
+    position:static!important;
+    width:100%!important;
+    margin:25px auto 0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    text-align:center!important;
+  }
+
+  .wedding .wedding-venue>span{
+    font-size:7.5px!important;
+    line-height:1.15!important;
+  }
+
+  .wedding .wedding-venue>span b{
+    font-size:10.5px!important;
+    line-height:1.2!important;
+  }
+
+  .wedding .wedding-venue .map{
+    margin:4px auto 0!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts{
+    grid-template-columns:1fr 1.25fr 1fr!important;
+    gap:5px!important;
+    margin-top:27px!important;
+  }
+
+  .wedding .facts.wedding-facts span{
+    font-size:6.4px!important;
+    letter-spacing:.45px!important;
+  }
+
+  .wedding .facts.wedding-facts span b{
+    font-size:8.8px!important;
+  }
+
+  .wedding .wedding-venue{
+    margin-top:22px!important;
+  }
+}
