@@ -1582,14 +1582,25 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     padding-top:222px;
     background-size:100% 100%;
   }
-  .wedding{
-    background-image:url("images/Wedding-2.png")!important;
-  }
 }
 @media(max-width:390px){
   .event{padding-top:214px}
 }
- 
+
+/* Final wedding tile tuning: use the same Wedding-1 artwork at every viewport.
+   Move the wedding details upward so they sit over the clearer upper-middle area. */
+.wedding{
+  background-image:url("images/Wedding-1.png")!important;
+}
+.wedding>div:last-child{
+  transform:translateY(-105px);
+}
+@media(max-width:720px){
+  .wedding>div:last-child{
+    transform:translateY(-72px);
+  }
+}
+
 /* Targeted restoration from c20709f: no new decorative system, only visibility and Marathi polish. */
 :root{--dev:"Tiro Devanagari Marathi","Noto Serif Devanagari","Mangal",serif}
 .marathi{font-family:var(--dev)}
