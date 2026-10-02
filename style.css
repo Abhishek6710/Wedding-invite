@@ -2422,3 +2422,34 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:247px!important;
   }
 }
+
+
+/* ---------- Mobile final cleanup ---------- */
+/* Sangeet note is no longer needed; remove it completely so the venue
+   and Maps button can sit higher in the clear space above the dancer. */
+@media(max-width:720px){
+  .sangeet .note{
+    display:none!important;
+  }
+  .sangeet .facts{
+    margin-bottom:4px!important;
+  }
+  .sangeet .map{
+    margin-top:4px!important;
+  }
+
+  /* Wedding: the facts are correctly centred now. Move only the venue/map
+     upward so they don't sit on the bottom decorative border. */
+  .wedding .wedding-venue{
+    top:218px!important;
+  }
+  .wedding .wedding-venue .map{
+    margin-top:3px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .wedding-venue{
+    top:210px!important;
+  }
+}
