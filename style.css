@@ -2281,3 +2281,72 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:247px!important;
   }
 }
+
+
+/* ---------- Wedding details: bring the information into the central clear space ---------- */
+/* Keep the Wedding layout distinct, but use the same compact centred footprint
+   as Haldi/Sangeet instead of pushing the details to the artwork edges. */
+.wedding .facts.wedding-facts{
+  top:185px!important;
+  left:14%!important;
+  right:14%!important;
+  width:72%!important;
+  height:104px!important;
+}
+.wedding .facts.wedding-facts span{
+  width:40%!important;
+}
+.wedding .facts.wedding-facts span:nth-child(1){
+  left:0!important;
+  top:0!important;
+}
+.wedding .facts.wedding-facts span:nth-child(2){
+  right:0!important;
+  top:0!important;
+}
+.wedding .facts.wedding-facts span:nth-child(3){
+  left:30%!important;
+  top:58px!important;
+  width:40%!important;
+}
+.wedding .wedding-venue{
+  top:285px!important;
+}
+
+@media(max-width:720px){
+  .wedding .facts.wedding-facts{
+    top:168px!important;
+    left:11%!important;
+    right:11%!important;
+    width:78%!important;
+    height:98px!important;
+  }
+  .wedding .facts.wedding-facts span{
+    width:40%!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    left:30%!important;
+    top:55px!important;
+    width:40%!important;
+  }
+  .wedding .wedding-venue{
+    top:260px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts{
+    top:158px!important;
+    left:9%!important;
+    right:9%!important;
+    width:82%!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    left:28%!important;
+    width:44%!important;
+    top:52px!important;
+  }
+  .wedding .wedding-venue{
+    top:247px!important;
+  }
+}
