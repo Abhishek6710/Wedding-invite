@@ -2945,3 +2945,55 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     margin-top:24px;
   }
 }
+
+
+/* ---------- Engagement glimpse: compact + cute ---------- */
+.engagement-glimpse .section{
+  padding-top:58px;
+  padding-bottom:58px;
+}
+.engagement-glimpse h2{
+  margin-top:8px;
+  font-size:clamp(44px,5.5vw,64px);
+}
+.engagement-glimpse .engagement-date{
+  margin-top:12px;
+  font:600 10px/1.2 Manrope,sans-serif;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#9b7137;
+}
+.engagement-glimpse .lead{
+  max-width:520px;
+  margin-top:12px;
+  font-size:13px;
+}
+.engagement-glimpse .engagement-button{
+  margin-top:20px;
+  min-width:200px;
+  padding:11px 18px;
+}
+@media(max-width:720px){
+  .engagement-glimpse .section{
+    padding-top:48px;
+    padding-bottom:48px;
+  }
+  .engagement-glimpse h2{
+    font-size:clamp(40px,11vw,54px);
+  }
+  .engagement-glimpse .engagement-date{
+    margin-top:10px;
+    font-size:8px;
+    letter-spacing:2.4px;
+  }
+  .engagement-glimpse .lead{
+    max-width:280px;
+    margin-top:10px;
+    font-size:13px;
+    line-height:1.4;
+  }
+  .engagement-glimpse .engagement-button{
+    margin-top:18px;
+    width:min(220px,100%);
+  }
+}
