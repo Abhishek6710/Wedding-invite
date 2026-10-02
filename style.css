@@ -2453,3 +2453,123 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:210px!important;
   }
 }
+
+
+/* ---------- Final event information composition ---------- */
+/* Sangeet note is intentionally removed at every viewport. */
+.sangeet .note{
+  display:none!important;
+}
+
+/* Wedding: keep the entire information group centred and balanced.
+   Two top details, dress centred beneath, then venue and Maps. */
+.wedding .facts.wedding-facts{
+  position:absolute!important;
+  top:185px!important;
+  left:14%!important;
+  right:14%!important;
+  width:72%!important;
+  height:108px!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:12px 24px!important;
+  margin:0!important;
+  align-items:start!important;
+}
+.wedding .facts.wedding-facts span{
+  position:static!important;
+  width:auto!important;
+  min-width:0!important;
+  text-align:center!important;
+  margin:0!important;
+  grid-column:auto!important;
+}
+.wedding .facts.wedding-facts span:nth-child(1),
+.wedding .facts.wedding-facts span:nth-child(2){
+  grid-column:auto!important;
+}
+.wedding .facts.wedding-facts span:nth-child(3){
+  grid-column:1 / -1!important;
+  width:auto!important;
+  margin:0 auto!important;
+}
+.wedding .facts.wedding-facts span b{
+  display:block!important;
+  line-height:1.2!important;
+  margin-bottom:3px!important;
+  white-space:normal!important;
+}
+.wedding .wedding-venue{
+  position:absolute!important;
+  top:285px!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:5px!important;
+  text-align:center!important;
+}
+.wedding .wedding-venue .map{
+  margin:3px auto 0!important;
+}
+
+/* Phone: use the same composition, with dimensions that fit the square card. */
+@media(max-width:720px){
+  .wedding .facts.wedding-facts{
+    top:158px!important;
+    left:8%!important;
+    right:8%!important;
+    width:84%!important;
+    height:98px!important;
+    gap:11px 14px!important;
+  }
+  .wedding .facts.wedding-facts span{
+    position:static!important;
+    width:auto!important;
+    font-size:7px!important;
+    line-height:1.25!important;
+    letter-spacing:.8px!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    width:auto!important;
+    margin:0 auto!important;
+  }
+  .wedding .facts.wedding-facts span b{
+    font-size:10px!important;
+  }
+  .wedding .wedding-venue{
+    top:218px!important;
+  }
+  .wedding .wedding-venue>span{
+    font-size:8px!important;
+  }
+  .wedding .wedding-venue>span b{
+    font-size:10.5px!important;
+  }
+  .wedding .wedding-venue .map{
+    margin-top:3px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts{
+    top:151px!important;
+    left:7%!important;
+    right:7%!important;
+    width:86%!important;
+    height:94px!important;
+    gap:10px 10px!important;
+  }
+  .wedding .facts.wedding-facts span{
+    font-size:6.8px!important;
+  }
+  .wedding .facts.wedding-facts span b{
+    font-size:9.5px!important;
+  }
+  .wedding .wedding-venue{
+    top:210px!important;
+  }
+}
