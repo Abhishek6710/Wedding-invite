@@ -1794,3 +1794,85 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
   .story-grid{margin-top:38px}
   .gallery .grid{gap:10px}
 }
+
+
+/* ---------- Final uploaded-tile layout fix ---------- */
+/* The uploaded ceremony artworks are square compositions. Keep the card square
+   so the artwork retains its intended proportions on desktop and mobile. */
+.event{
+  width:min(720px,100%)!important;
+  max-width:720px!important;
+  min-height:0!important;
+  aspect-ratio:1 / 1;
+  height:auto;
+  padding:0!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+}
+.event>div:last-child{
+  position:absolute!important;
+  left:7%!important;
+  right:7%!important;
+  top:37%!important;
+  width:auto!important;
+  max-width:none!important;
+  margin:0!important;
+  transform:none!important;
+}
+.wedding>div:last-child{
+  top:25%!important;
+}
+/* Wedding's empty area is cream, so use darker typography instead of ivory. */
+.wedding{
+  --event-ink:#6a1730;
+  --event-muted:#8a4c5d;
+  --event-gold:#9a6b25;
+}
+.wedding h3,
+.wedding .tag{
+  color:var(--event-ink)!important;
+  text-shadow:none!important;
+}
+.wedding small,
+.wedding .facts span{
+  color:var(--event-muted)!important;
+}
+.wedding .facts b{
+  color:var(--event-ink)!important;
+}
+.wedding .tag:before{
+  background:linear-gradient(90deg,transparent,var(--event-gold),transparent)!important;
+}
+.wedding .map{
+  color:var(--event-gold)!important;
+  border-color:var(--event-gold)!important;
+  background:rgba(255,248,235,.72)!important;
+}
+@media(max-width:720px){
+  .event{
+    width:100%!important;
+    max-width:100%!important;
+    aspect-ratio:1 / 1;
+    min-height:0!important;
+    padding:0!important;
+  }
+  .event>div:last-child{
+    top:37%!important;
+    left:5%!important;
+    right:5%!important;
+  }
+  .wedding>div:last-child{
+    top:25%!important;
+  }
+}
+@media(max-width:390px){
+  .event>div:last-child{
+    top:35%!important;
+    left:4.5%!important;
+    right:4.5%!important;
+  }
+  .wedding>div:last-child{
+    top:24%!important;
+  }
+}
