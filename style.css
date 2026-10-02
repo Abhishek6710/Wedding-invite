@@ -2230,3 +2230,54 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
     top:18%!important;
   }
 }
+
+
+/* ---------- Wedding-2 final fit ---------- */
+/* Wedding-2 has a large open cream centre, so use that space instead of
+   crowding the information immediately beneath the heading. */
+.wedding .facts.wedding-facts{
+  top:185px!important;
+  height:104px!important;
+}
+.wedding .facts.wedding-facts span:nth-child(1){
+  top:0!important;
+}
+.wedding .facts.wedding-facts span:nth-child(2){
+  top:0!important;
+}
+.wedding .facts.wedding-facts span:nth-child(3){
+  top:58px!important;
+}
+.wedding .wedding-venue{
+  top:285px!important;
+}
+.wedding .wedding-venue .map{
+  margin-top:5px!important;
+}
+
+/* Keep the same visual hierarchy on smaller screens, scaling the spacing
+   rather than letting the browser stack the details over the artwork. */
+@media(max-width:720px){
+  .wedding .facts.wedding-facts{
+    top:168px!important;
+    height:98px!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    top:55px!important;
+  }
+  .wedding .wedding-venue{
+    top:260px!important;
+  }
+}
+
+@media(max-width:390px){
+  .wedding .facts.wedding-facts{
+    top:158px!important;
+  }
+  .wedding .facts.wedding-facts span:nth-child(3){
+    top:52px!important;
+  }
+  .wedding .wedding-venue{
+    top:247px!important;
+  }
+}
