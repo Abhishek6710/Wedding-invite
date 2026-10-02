@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 import shutil
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
@@ -59,6 +59,30 @@ def optimise_image(filename: str, max_dimension: int, quality: int) -> None:
         original_kb = source.stat().st_size / 1024
         optimised_kb = output.stat().st_size / 1024
         print(f"{filename}: {original_kb:.0f} KB -> {optimised_kb:.0f} KB")
+
+
+def create_preview() -> None:
+    """Create a clear, social-friendly JPEG preview from couple-01."""
+    source = SRC_IMAGES / "couple-01.JPG"
+    output = OUT_IMAGES / "couple-01-preview.jpg"
+    target_size = (1280, 640)
+
+    with Image.open(source) as image:
+        image = ImageOps.fit(
+            image.convert("RGB"),
+            target_size,
+            method=Image.Resampling.LANCZOS,
+            centering=(0.5, 0.42),
+        )
+        image.save(
+            output,
+            format="JPEG",
+            quality=92,
+            optimize=True,
+            progressive=True,
+        )
+
+    print(f"Preview created: {output}")
 
 
 def replace_references() -> None:
@@ -133,6 +157,7 @@ def main() -> None:
     for filename, (max_dimension, quality) in {**PHOTO_SPECS, **ART_SPECS}.items():
         optimise_image(filename, max_dimension, quality)
 
+    create_preview()
     replace_references()
     tune_index()
 
