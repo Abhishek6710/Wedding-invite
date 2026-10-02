@@ -1601,6 +1601,79 @@ footer{background:#230610;border-top:1px solid rgba(199,154,69,.3)}footer small{
   }
 }
 
+/* ---------- Final event content positioning ---------- */
+/* Keep the uploaded artwork untouched; place the live text inside its clear central area. */
+.event{
+  padding:0 58px 30px!important;
+}
+.event>div:last-child{
+  position:absolute!important;
+  top:188px;
+  left:58px;
+  right:58px;
+  width:auto!important;
+  max-width:none!important;
+  margin:0!important;
+  transform:none!important;
+}
+.event h3{
+  margin:8px 0 8px;
+  line-height:1;
+}
+.event .tag{
+  margin:0 auto;
+  line-height:1.2;
+}
+.event .facts{
+  margin:26px auto 18px;
+}
+.event .map{
+  margin-top:8px;
+}
+.wedding>div:last-child{
+  top:126px;
+}
+@media(max-width:720px){
+  .event{
+    padding:0 22px 28px!important;
+  }
+  .event>div:last-child{
+    top:150px;
+    left:22px;
+    right:22px;
+  }
+  .wedding>div:last-child{
+    top:104px;
+  }
+  .event h3{
+    font-size:clamp(42px,12vw,56px);
+  }
+  .event .tag{
+    font-size:17px;
+  }
+  .event .facts{
+    margin-top:20px;
+    margin-bottom:14px;
+  }
+}
+@media(max-width:390px){
+  .event{
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .event>div:last-child{
+    top:138px;
+    left:18px;
+    right:18px;
+  }
+  .wedding>div:last-child{
+    top:94px;
+  }
+  .event h3{
+    font-size:42px;
+  }
+}
+ 
 /* Targeted restoration from c20709f: no new decorative system, only visibility and Marathi polish. */
 :root{--dev:"Tiro Devanagari Marathi","Noto Serif Devanagari","Mangal",serif}
 .marathi{font-family:var(--dev)}
